@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es2019", //versão do ecma script
+    "moduleResolution": "node", 
+    "module": "commonjs",
+    "lib": ["es2019"],
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "noImplicitAny": true, //para o ts não por any por padrão
+    "strictNullChecks": true, 
+    "strictFunctionTypes": true,
+    "noImplicitThis": true, //não por .this em functions 
+    "resolveJsonModule": true,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": { //alias para pastas
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    "rootDirs": [
+      "./src",
+      "./test"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules/*",
+    "dist"
+  ]
+}
